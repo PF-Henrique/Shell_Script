@@ -17,14 +17,14 @@ echo "Resposta:"
 VARIAVEL="Shell Script com variáveis é demais!"
 echo $VARIAVEL
 
-# -------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 echo -e "3. Escreva um Shell Script que guarde o resultado do comando hostname em uma variável.\nImprima na tela uma mensagem: "Este script está rodando no computador: _" em que "_" é o resultado do comando hostname que está na variável;"
 echo "Resposta:"
 
 HOSTNAME=`hostname`
 echo "Este script está rodando no computador: $HOSTNAME"
 
-# -------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 echo -e "4. Escreva um Shell Script que verifique se o caminho até um arquivo existe (“file path”). Se ele existir, imprima na tela a mensagem: "O caminho _ está habilitado!". Então, verifique se você tem permissão de escrita no arquivo. Se tiver, mostre a mensagem: "Você tem permissão para editar _". Caso contrário, mostre a mensagem: "Você NÃO foi autorizado a editar _". O _ nas mensagens deve ser substituído pelo (“file path”)."
 echo "Resposta:"
@@ -46,7 +46,7 @@ if [ -w $CAMINHO ]
   else
     echo "Você NÃO foi autorizado a editar"
 fi
-# -------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 echo -e "5. Escreva um Shell Script que imprima as palavras \n"shell", "script", "usando", "estrutura", "repetição", "for", "terminal" na tela, uma palavra por linha. \nTente fazer isso usando o menor número de comandos possível."
 echo "Resposta:"
@@ -56,7 +56,7 @@ for PALAVRA in SHEL USUARIO ESTRUTURA REPETIÇÃO FOR TERMINAL
     echo $PALAVRA
   done
 
-# -------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 echo -e "6. Escreva um Shell Script que peça ao usuário um caminho de arquivo ou diretório e, \nem seguida, imprima na tela se ele é um arquivo comum, um diretório, ou outro tipo de arquivo. \nDepois, faça um comando de listagem no arquivo/diretório usando a opção de listagem detalhada."
 echo "Resposta:"
@@ -76,7 +76,7 @@ fi
 ls $VARIAVEL -la
 
 
-# -------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 echo -e "6. Escreva um Shell Script que peça ao usuário um caminho de arquivo ou diretório e, \nem seguida, imprima na tela se ele é um arquivo comum, um diretório, ou outro tipo de arquivo. \nDepois, faça um comando de listagem no arquivo/diretório usando a opção de listagem detalhada."
 echo "Resposta:"
@@ -95,7 +95,7 @@ fi
 
 ls $VARIAVEL -la
 
-# -------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 echo -e "8. Modifique o Shell Script do exercício anterior para aceitar uma quantidade \nilimitada de arquivos ou diretórios como argumento (ou parâmetro)."
 echo "Resposta:"
@@ -116,7 +116,7 @@ do
     ls -l $NOME
 done
 
-# -------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 echo -e "9. Escreva um Shell Script que receba um diretório como argumento (ou parâmetro). \nSe o argumento não for um diretório, mostre a mensagem: "O argumento _ não é um diretório!". Se o argumento for um diretório, \nconte quantos arquivos existem nele e mostre a seguinte mensagem: "O _ tem _ arquivos.", em que você deve substituir \nos "_" pelo diretório e a quantidade de arquivos nele, respectivamente."
 echo "Resposta:"
@@ -131,7 +131,7 @@ else
     echo "O argumento $DIRETORIO não é um diretório!"
 fi
 
-# -------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 echo -e "10. Escreva um Shell Script que renomeie todos os arquivos do diretório atual que terminam em ".png", de forma que o nome do arquivo comece com a data atual no formato "YYYY-MM-DD". Por exemplo, se tiver um arquivo com o nome "kitten.png" no diretório atual, e a data de hoje for 16/04/2020, o script deverá mudar o nome do arquivo para "2020-04-16-kitten.png"."
 echo "Resposta:"
@@ -143,7 +143,7 @@ do
     mv $FILE ${DAY}-${FILE}
 done
 
-# -------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 echo -e "11. Modifique o Shell Script do exercício anterior para receber o diretório onde estão os arquivos e a extensão dos arquivos que devem ser modificados como argumento (ou parâmetro). Adicione também um mensagem mostrando como eram o como vão ficar os nomes dos arquivos a serem modificados."
 echo "Resposta:"
@@ -161,7 +161,7 @@ do
     mv $FILE ${DAY}-${FILE}
 done
 
-# -------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 echo -e "12. pegie o imput que o usuario escrever e verifique se ele e maior ou igual a 16"
 echo "Resposta:"
 
@@ -176,7 +176,7 @@ else
 echo "Você ainda não pode votar."
 fi
 
-# -------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 echo -e "13. faca um script usando o DO while para tratar de tres casos especificos"
 echo "Resposta:"
@@ -200,7 +200,7 @@ do
 done
 echo 
 echo "That's all folks!"
-# -------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 echo -e "14. Defina um valor default para a variavel nome"
 echo "Resposta:"
@@ -220,7 +220,7 @@ if [ -z "$myname" ]; then
 echo "Your name is : ${myname:=John Doe}"
 fi
 
-# -------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # OUTROS COMANDOS COMUNS
 
 echo "Criando um arquivo"
