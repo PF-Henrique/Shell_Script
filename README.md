@@ -1,4 +1,4 @@
-# Repo destinado a estudos para criação de scripts em shell
+## Repo destinado a estudos para criação de scripts em shell
 
 ###### tags: `introducao a shell script`
 
