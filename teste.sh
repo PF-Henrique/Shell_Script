@@ -219,6 +219,69 @@ read myname
 if [ -z "$myname" ]; then
 echo "Your name is : ${myname:=John Doe}"
 fi
+# ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Para executar uma func com argumentos basta rodar da seguinte maneira '$ bash test.sh <buildDocker_func> <nome_img_arg>'
+
+function showHelp() {
+    echo "
+    ./dockerw.sh (docker wrapper)
+                --help      shows help
+                --build     builds container
+                --run       runs container
+                --runbg     runs container in background
+                --cli       runs container with interactive cli (bash)
+                --push      pushes container to docker hub
+                --pull      pulls container from docker hub
+                --stop      stops running docker container
+                --remove    removes container
+                --list      shows available docker containers
+                --ps        show running containers
+    "
+}
+
+function buildDocker() {
+    sudo docker build -t $IMAGE_NAME .
+}
+
+function runDocker() {
+   sudo docker run -p $HOST:$PORT_IN:$PORT_OUT -t $IMAGE_NAME
+}
+
+function runDockerInBackground() {
+   sudo docker run -p $HOST:$PORT_IN:$PORT_OUT -td $IMAGE_NAME
+}
+
+function runDockerCli() {
+   sudo docker exec -it $IMAGE_NAME /bin/bash
+}
+
+function pushDocker() {
+    sudo docker push $IMAGE_NAME
+}
+
+function pullDocker() {
+    sudo docker pull $IMAGE_NAME
+}
+
+function stopDocker() {
+   sudo docker stop $(sudo docker ps | grep $IMAGE_NAME | awk 'NF>1{print $NF}')
+}
+
+function removeDocker() {
+   sudo docker rmi -f $(sudo docker images | grep $IMAGE_NAME | awk '{print $3}')
+}
+
+function listImages() {
+   sudo docker images
+}
+
+function showRunningContainers() {
+   sudo docker ps
+}
+
+done
+
 
 # ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # OUTROS COMANDOS COMUNS
