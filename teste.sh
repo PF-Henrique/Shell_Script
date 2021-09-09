@@ -253,3 +253,6 @@ ls -la
 echo "verificando conteúdo"
 cat hacking-a-news.txt
 
+echo "dando permissao para executar um script"
+chmod a+x nome_do_arquivo.ext
+
